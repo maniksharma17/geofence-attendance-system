@@ -17,7 +17,7 @@ export const signinHandler = async (req, res) => {
     password: userPayload.password,
   });
 
-  if (user) {
+  if (employee) {
     const token = await jwt.sign({ employee }, process.env.JWT_SECRET);
 
     res.status(200).json({
